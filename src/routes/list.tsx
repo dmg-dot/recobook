@@ -20,7 +20,7 @@ const Link = styled.a`
 `
 
 const BookList = styled.div`
-    background:white;
+    background:rgb(243, 248, 253);
     width:100%;
     height:100%;
     padding-bottom:50px;
@@ -33,11 +33,24 @@ const ListComponent = styled.div`
     margin: 0 auto;
     border-radius:10px;
     margin-top:30px;
-    box-shadow:1px 1px 1px 1px lightgrey;
+    box-shadow:2px 2px 10px 1px lightgrey;
 `
 
-const Title = styled.h3`
+const Title = styled.h2`
     color:black;
+    margin-left:20px;
+    font-size:25px;
+`
+
+const ListTitle = styled.h2`
+    
+`
+
+const ListContent = styled.p`
+    
+`
+const ListButton = styled.div`
+    
 `
 
 
@@ -53,7 +66,11 @@ export default function List() {
                     <Link href="/write">Write</Link>
                 </NavBar>
                 <Title>List</Title>
-                <ListComponent></ListComponent>
+                <ListComponent>
+                    <ListTitle>제목</ListTitle>
+                    <ListContent></ListContent>
+                    <ListButton></ListButton>
+                </ListComponent>
                 <ListComponent></ListComponent>
                 <ListComponent></ListComponent>
             </BookList>
