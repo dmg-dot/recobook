@@ -9,6 +9,7 @@ export default function Write(){
     const [inputValue, setInputValue] = useState('');
     const onSubmit = () => {
         //글 저장
+        //변경했어요
         
         
 
