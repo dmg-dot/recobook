@@ -1,29 +1,40 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
 
-const InputField = styled.input`
-  border: none;
-  width: 100%;
-`;
+const Main = styled.div`
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid gray;
+    text-align: center;
+`
+
 export default function Write(){
     const [inputValue, setInputValue] = useState('');
     const onSubmit = () => {
         //글 저장
-        //변경했어요
-        
-        
 
         setInputValue('');
     }
     return(
-        <>
-            <InputField
-                type="text"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-            />
+        <Main>
+            <div>
+                <input 
+                    type="text"
+                    value={inputValue} 
+                    placeholder="내용을 입력하세요."
+                    onChange={(e) => setInputValue(e.target.value)}
+                />
+            </div>
+             <div>
+                <textarea 
+                    value={inputValue} 
+                    placeholder="내용을 입력하세요."
+                    onChange={(e) => setInputValue(e.target.value)} 
+                />
+            </div>
             <button onClick={onSubmit}>저장</button>
-        </>
+        </Main>
     )
     
 }
