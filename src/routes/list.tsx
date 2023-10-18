@@ -3,10 +3,10 @@ import styled from "styled-components"
 
 
 const BookList = styled.div`
-    background:rgb(243, 248, 253);
+    background:rgb(22, 25, 29);
     width:100%;
-    height:100%;
-    padding-bottom:50px;
+    height:100vh;
+    /* padding-bottom:50px; */
 `
 
 const ListComponent = styled.div`
@@ -51,7 +51,6 @@ const ListButton = styled.div`
 
 export default function List() {
     return (
-        <>
             <BookList>
                 <Title>List</Title>
                 <ListComponent>
@@ -62,6 +61,5 @@ export default function List() {
                 <ListComponent></ListComponent>
                 <ListComponent></ListComponent>
             </BookList>
-        </>
     )
 }
