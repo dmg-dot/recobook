@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from 'styled-components';
+import { dbService } from "../fbase";
 
 const WriteWrap = styled.div`
     width:100%;
@@ -71,10 +72,22 @@ const SubmitWrap = styled.div`
 `
 
 export default function Write() {
-    const [inputValue, setInputValue] = useState('');
-    const onSubmit = () => {
+    const [title, setTitle] = useState('');
+    const [sentence, setSentence] = useState('');
+    const [description, setDescription] = useState('');
+
+    const onSubmit = async (e) => {
         //글 저장
-        setInputValue('');
+        await e.preventDefault();
+        dbService.collection("dot").add({
+            title,
+            sentence,
+            description,
+            createAt : Date.now(),
+        });
+        setDescription('');
+        setSentence('');
+        setTitle('');
     }
     return (
         <>
@@ -85,27 +98,27 @@ export default function Write() {
                         <Input
                             placeholder="책 제목"
                             type="text"
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
                         />
                     </form>
                     <form>
                         <Input
                             placeholder="기억에 남는 구절"
                             type="text"
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
+                            value={sentence}
+                            onChange={(e) => setSentence(e.target.value)}
                         />
                     </form>
                     <form>
                         <TextArea
                             placeholder="내용을 입력하세요."
-                            value={inputValue}
-                            onChange={(e) => setInputValue(e.target.value)}
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
                         />
                     </form>
                     <SubmitWrap>
-                        <form><Submit>게시</Submit></form>
+                        <form><Submit onClick={onSubmit}>게시</Submit></form>
                     </SubmitWrap>
                 </Main>
             </WriteWrap>
