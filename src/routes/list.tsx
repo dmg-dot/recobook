@@ -53,7 +53,6 @@ export default function List() {
     return (
         <>
             <BookList>
-                
                 <Title>List</Title>
                 <ListComponent>
                     <ListTitle>제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</ListTitle>
