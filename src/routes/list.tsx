@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 
 const BookList = styled.div`
-    background:rgb(22, 25, 29);
+    background:rgb(243, 248, 253);
     width:100%;
     height:100vh;
     /* padding-bottom:50px; */
@@ -51,15 +51,15 @@ const ListButton = styled.div`
 
 export default function List() {
     return (
-            <BookList>
-                <Title>List</Title>
-                <ListComponent>
-                    <ListTitle>제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</ListTitle>
-                    <ListContent>내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다</ListContent>
-                    <ListButton></ListButton>
-                </ListComponent>
-                <ListComponent></ListComponent>
-                <ListComponent></ListComponent>
-            </BookList>
+        <BookList>
+            <Title>List</Title>
+            <ListComponent>
+                <ListTitle>제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</ListTitle>
+                <ListContent>내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다내용이다</ListContent>
+                <ListButton></ListButton>
+            </ListComponent>
+            <ListComponent></ListComponent>
+            <ListComponent></ListComponent>
+        </BookList>
     )
 }
