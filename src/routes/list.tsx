@@ -22,6 +22,8 @@ const ListComponent = styled.div`
 
 const Title = styled.h2`
     color:black;
+    margin:0;
+    padding-top:20px;
     margin-left:20px;
     font-size:25px;
 `
